@@ -217,11 +217,11 @@
     <script>
         $(function () {
             $('#portfolio').fullpage({
-                anchors: ['p01', 'p02', 'p03', 'p04', 'p05'],//주소창에 해시 생김 ex)#p01, #p02
+                anchors: ['p01', 'p02', 'p03', 'p04', 'p05'], //주소창에 해시 생김 ex)#p01, #p02
                 //navigation:true,
                 afterLoad: function (origin, destination, direction, trigger) {
-                    $('.section, nav li').eq(destination.index).addClass('on').siblings().removeClass('on')
-                    //$('nav li').eq(destination.index).addClass('on').siblings().removeClass('on')
+                    $('.section').eq(destination.index).addClass('on').siblings().removeClass('on')
+                    $('nav li').eq(destination.index).addClass('on').siblings().removeClass('on')
                 }
 
             });
@@ -230,6 +230,12 @@
                 $('#cover').toggleClass('on');
                 $('.cover_toggle').toggleClass('on');
             });
+
+            $('#cover').on('wheel scroll', function (e) {
+                e.stopPropagation();
+            })
+
+
             //$('#cover a').on('click', function () {
             //    $('#cover').removeClass('on');
             //    $('.cover_toggle').toggleClass('on');
