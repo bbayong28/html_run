@@ -23,8 +23,10 @@ $(function () {
         var idx = $(this).parent().index();
         $('.main_slider').slick('slickGoTo', idx);
         $('.num').css({ backgroundPositionY: -100 * idx + "px" });
+        createNum = idx;
 
-    })
+    });
+
 
     $('.custom_arrow i:nth-child(1)').on('click', function () {
         $('.main_slider').slick('slickPrev');
@@ -40,6 +42,8 @@ $(function () {
         $('.main_slider').slick('slickPlay');
     })
         
+
+    
     
 
 
