@@ -227,19 +227,19 @@
             });
 
             $('.cover_toggle, #cover a').on('click', function () {
-                $('#cover').toggleClass('on');
-                $('.cover_toggle').toggleClass('on');
+                $('#cover, .cover_toggle').toggleClass('on');
+                //$('.cover_toggle').toggleClass('on');
             });
+            //$('#cover a').on('click', function () {
+            //    $('#cover').removeClass('on');
+            //    $('.cover_toggle').toggleClass('on');
+            //});
 
             $('#cover').on('wheel scroll', function (e) {
                 e.stopPropagation();
             })
 
 
-            //$('#cover a').on('click', function () {
-            //    $('#cover').removeClass('on');
-            //    $('.cover_toggle').toggleClass('on');
-            //});
         })
     </script>
 </body>
